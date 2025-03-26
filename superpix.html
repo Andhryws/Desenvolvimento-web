@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E o pix.com</title>
+</head>
+<body style = "background-color: antiquewhite;">
+
+    <script>
+        function enviarInformacoes () {
+    var qtd = document.getElementById("qtd").value;
+    var digitos = document.getElementById("digitos").value;
+    var d_validade = document.getElementById("d_validade").value;
+    var cartao = document.getElementById("cartao").value;
+    var sim = document.getElementById("simp1").checked ? "sim" : "não";
+    var nao = document.getElementById("naop1").checked ? "não" : "sim";
+    
+    var resultado = 
+    `<h3>informação dos bestas</h3>
+    <p><strong>Ele que pix?</strong> ${sim}</p>
+    <p><strong>Ultimos digitos do cartão: </strong> ${digitos}</p>
+    <p><strong>Data de validade do cartão: </strong> ${d_validade}</p>
+    <p><strong>Nome do cartão: </strong> ${cartao}</p>
+    `;
+    document.getElementById("informacoes").innerHTML = resultado;
+    }
+    
+    </script>
+
+
+    <section>
+        <h1>E o pix?</h1>
+    </section>
+    <section>
+        <h2>Você quer um pix?</h2>
+        <form>
+            <input type = "radio" id = "simp1" name = "sim" value = "sim">
+            <label for="simp1">Sim</label>
+            <input type="radio" id="naop1" name = "nao" value = "nao">
+            <label for="naop1">Não</label>
+        </form>
+    </section>
+    <section>
+        <h2>Digite a quantidade: </h2>
+        <input type="text" id="qtd">
+    </section>
+    <section>
+        <h2>Agora digite as seguintes informações para receber o pix supremo: </h2>
+        <p>Senha do cartão</p>
+        <input type="password" placeholder="Digite aqui" id = "senha">
+        <p>Primeiros 4 digitos</p>
+        <input type="text" placeholder ="Digite aqui" id = "digitos">
+        <p>data de validade</p>
+        <input type="date" placeholder = "Digite aqui" id = "d_validade">
+        <p>nome do cartão</p>
+        <input type="text" placeholder = "Digite aqui" id = "cartao"><br><br>
+    </section>
+    <section>
+        <button onclick = "enviarInformacoes()">Enviar!</button>
+    </section>
+
+    <section>
+        <div class = "informacoes" id = "informacoes"></div>
+    </section>
+ 
+    <a href ="teste.html">teste</a>
+
+
+
+</body>
+</html>
